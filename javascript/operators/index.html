@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        let runningStatus = false;
+        button.addEventListener('click', () => {
+            if (!runningStatus) {
+                button.textContent = 'Stop machine';
+                p.textContent = 'The machine has started';
+            } else {
+                button.textContent = 'Start machine';
+                p.textContent = 'The machine has stopped';
+            }
+            runningStatus = !runningStatus; //toggle
+        })
+    });
+</script>
+<body>
+<button>Start machine</button>
+<p>The machine is stopped.</p>
+</body>
+</html>
