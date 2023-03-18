@@ -1,0 +1,15 @@
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    lline-height: 1.4;
+}
+
+body {
+    color: #444;
+    font-family: "Helvetica Neue", Arial, serif;
+    font-size: 22px;
+    font-weight: 200;
+    -moz-osx-font-smoothing: grayscale;
+}
