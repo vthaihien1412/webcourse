@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="numberField"/>
+<button>
+  Press me
+</button>
+
+<p id="result">
+
+</p>
+
+<script>
+  // After a user enters a number
+  // If a number is valid , plus that number with 100
+  // else, display an error message
+
+  // If a user enter 100
+  // "Output is 200"
+
+
+  // If a user enter "abc123"
+  // You must enter a number
+
+
+  const inputNumberField = document.querySelector("input#numberField");
+  const paragraphResult = document.querySelector("p#result");
+  const button = document.querySelector("button");
+
+  function sum() {
+    const value = inputNumberField.value;
+    const valueNumber = Number(value);
+    if (!Number.isNaN(valueNumber)) {
+      paragraphResult.innerHTML = `The sum is ${(valueNumber)+ 100}`;
+    } else {
+      paragraphResult.innerHTML = "The number is invalid please enter again"
+    }
+  }
+  button.addEventListener("click", sum);
+
+</script>
+</body>
+</html>
