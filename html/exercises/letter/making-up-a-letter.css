@@ -5,7 +5,10 @@ body {
 
 .sender-column {
     text-align: right;
+    text-align-last: right;
+
 }
+
 
 h1 {
     font-size: 1.5em;
@@ -22,3 +25,4 @@ p,ul,ol,dl,address {
 p, li, dd, dt, address {
     line-height: 1.5;
 }
+
