@@ -6,7 +6,11 @@ const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
 const output = [];
 
 for (const station of stations) {
-    const formattedString = station;
+    const shortName = station.slice(0,3);
+    const indexName = station.indexOf(';');
+    const Name = station.slice(indexName+1);
+    const finalName = `${shortName}: ${Name}`;
+    const formattedString = finalName;
     output.push(formattedString);
 }
 console.log(output);
