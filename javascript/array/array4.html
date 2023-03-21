@@ -26,15 +26,18 @@
 
 </body>
 <script>
-  const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
-  let eBirds = [];
+  const birds = [ 'Parrots', 'Falcons', 'Eagles', 'Emus', 'Caracaras', 'Egrets' ];
+  eBirds = [];
   indexEagles = birds.indexOf('Eagles');
-  birds.splice(indexEagles);
-for (const bird of birds) {
-  if (bird.startsWith('E')) {
-    eBirds.push(bird);
+  birds.splice(indexEagles, 1);
+  for (const bird of birds) {
+    if (bird.startsWith('E')) {
+      eBirds.push(bird);
+    }
   }
-}
+
+  console.log(eBirds);
+
   // Don't edit the code below here!
 
   const section = document.querySelector('section');
