@@ -5,40 +5,40 @@
     <title>Top 5 search</title>
 </head>
 <body>
-  <div class="output">
+<div class="output">
     <ul></ul>
     <input>
     <button>Search</button>
-  </div>
+</div>
 <script>
-  const list = document.querySelector('.output ul');
-  const searchInput = document.querySelector('.output input');
-  const searchBtn = document.querySelector('.output button');
+    const list = document.querySelector('.output ul');
+    const searchInput = document.querySelector('.output input');
+    const searchBtn = document.querySelector('.output button');
 
-  list.innerHTML = '';
+    list.innerHTML = '';
 
-  const myHistory = [];
-  const MAX_HISTORY = 5;
+    const myHistory = [];
+    const MAX_HISTORY = 5;
 
-  searchBtn.onclick = () => {
-    if (searchInput.value !== '') {
-      myHistory.unshift(searchInput.value);
-      list.innerHTML = '';
+    searchBtn.onclick = () => {
+        if (searchInput.value !== '') {
+            myHistory.unshift(searchInput.value);
+            list.innerHTML = '';
 
-      for (const itemText of myHistory) {
-        const listItem = document.createElement('li');
-        listItem.textContent = itemText;
-        list.appendChild(listItem);
-      }
+            for (const itemText of myHistory) {
+                const listItem = document.createElement('li');
+                listItem.textContent = itemText;
+                list.appendChild(listItem);
+            }
 
-      if (myHistory.length >= MAX_HISTORY) {
-        myHistory.pop();
-      }
+            if (myHistory.length >= MAX_HISTORY) {
+                myHistory.pop();
+            }
 
-      searchInput.value = '';
-      searchInput.focus();
+            searchInput.value = '';
+            searchInput.focus();
+        }
     }
-  }
 
 </script>
 </body>

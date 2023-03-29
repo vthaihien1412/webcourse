@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Arrays: Task 4</title>
-  <style>
-    p {
-      color: purple;
-      margin: 0.5em 0;
-    }
+    <meta charset="utf-8"/>
+    <title>Arrays: Task 4</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
-  </style>
-  <link rel="stylesheet" href="../styles.css" />
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css"/>
 </head>
 
 <body>
@@ -21,31 +21,30 @@
 <section class="preview">
 
 
-
 </section>
 
 </body>
 <script>
-  const birds = [ 'Parrots', 'Falcons', 'Eagles', 'Emus', 'Caracaras', 'Egrets' ];
-  eBirds = [];
-  indexEagles = birds.indexOf('Eagles');
-  birds.splice(indexEagles, 1);
-  for (const bird of birds) {
-    if (bird.startsWith('E')) {
-      eBirds.push(bird);
+    const birds = ['Parrots', 'Falcons', 'Eagles', 'Emus', 'Caracaras', 'Egrets'];
+    eBirds = [];
+    indexEagles = birds.indexOf('Eagles');
+    birds.splice(indexEagles, 1);
+    for (const bird of birds) {
+        if (bird.startsWith('E')) {
+            eBirds.push(bird);
+        }
     }
-  }
 
-  console.log(eBirds);
+    console.log(eBirds);
 
-  // Don't edit the code below here!
+    // Don't edit the code below here!
 
-  const section = document.querySelector('section');
+    const section = document.querySelector('section');
 
-  const para1 = document.createElement('p');
-  para1.textContent = eBirds;
+    const para1 = document.createElement('p');
+    para1.textContent = eBirds;
 
-  section.appendChild(para1);
+    section.appendChild(para1);
 </script>
 
 </html>

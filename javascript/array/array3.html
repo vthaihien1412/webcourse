@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Arrays: Task 3</title>
-  <style>
-    p {
-      color: purple;
-      margin: 0.5em 0;
-    }
+    <meta charset="utf-8"/>
+    <title>Arrays: Task 3</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
-  </style>
-  <link rel="stylesheet" href="../styles.css" />
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css"/>
 </head>
 
 <body>
@@ -21,31 +21,30 @@
 <section class="preview">
 
 
-
 </section>
 
 </body>
 <script>
-  let myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
+    let myArray = ["Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri"];
 
-myArray.pop();
-myArray.push('Vincent', 'Vanessa');
-let myNumber = 0;
-output = [];
+    myArray.pop();
+    myArray.push('Vincent', 'Vanessa');
+    let myNumber = 0;
+    output = [];
 
-for (const item of myArray) {
-  const fullItem = `${item} (${myNumber})`
-  myNumber++;
-  output.push(fullItem);
+    for (const item of myArray) {
+        const fullItem = `${item} (${myNumber})`
+        myNumber++;
+        output.push(fullItem);
 
-}
-  myString = output.toString();
-  const section = document.querySelector('section');
-  let para1 = document.createElement('p');
-  para1.textContent = myString;
+    }
+    myString = output.toString();
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = myString;
 
-  section.appendChild(para1);
-  // Don't edit the code below here!
+    section.appendChild(para1);
+    // Don't edit the code below here!
 
 </script>
 
