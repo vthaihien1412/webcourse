@@ -5,26 +5,57 @@
     <title>More color choices</title>
 </head>
 <body>
-  <div class="output">
+<div class="output">
+    <label>Select theme:</label>
     <select>
-      <option value="white">White</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="purple">Purple</option>
+        <option value="yellow">Yellow</option>
+        <option value="psychedelic">Psychedelic</option>
     </select>
-  </div>
+
+    <h1>This is my website</h1>
+
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
 
 <script>
-  const select = document.querySelector('select');
-  const html = document.querySelector('.output');
+    const select = document.querySelector('select');
+    const html = document.querySelector('.output');
+    document.body.style.padding = "20px";
 
-  select.addEventListener('change', () => {
-    const choice = select.value;
+    select.addEventListener('change', () => {
+        const choice = select.value;
 
-    // ADD SWITCH STATEMENT
-  });
+        switch (choice) {
 
-  function update(bgColor, textColor) {
-    html.style.backgroundColor = bgColor;
-    html.style.color = textColor;
-  }
+            case "white":
+                update("white", "black");
+                break;
+
+            case "black" :
+                update("black", "white");
+                break;
+
+            case "purple" :
+                update("purple", "white");
+                break;
+            case "yellow" :
+                update("yellow", "black");
+                break;
+            case "psychedelic" :
+                update("green", "purple");
+                break;
+        }
+    });
+
+    function update(bgColor, textColor) {
+        html.style.backgroundColor = bgColor;
+        html.style.color = textColor;
+    }
 
 </script>
 </body>

@@ -5,56 +5,56 @@
     <title>Simple Calendar</title>
 </head>
 <body>
-  <select>
+<select>
     <option value="January">Jan</option>
-      <option value="February">Feb</option>
-      <option value="March">Mar</option>
-      <option value="April">Apr</option>
-      <option value="May">May</option>
-      <option value="June">Jun</option>
-      <option value="July">Jul</option>
-      <option value="August">Aug</option>
-      <option value="September">Sep</option>
-      <option value="October">Oct</option>
-      <option value="November">Nov</option>
-      <option value="December">Dec</option>
-  </select>
-  <h1></h1>
-  <ul>
+    <option value="February">Feb</option>
+    <option value="March">Mar</option>
+    <option value="April">Apr</option>
+    <option value="May">May</option>
+    <option value="June">Jun</option>
+    <option value="July">Jul</option>
+    <option value="August">Aug</option>
+    <option value="September">Sep</option>
+    <option value="October">Oct</option>
+    <option value="November">Nov</option>
+    <option value="December">Dec</option>
+</select>
+<h1></h1>
+<ul>
 
-  </ul>
+</ul>
 
 <script>
-  const select = document.querySelector('select');
-  const list = document.querySelector('ul');
-  const h1 = document.querySelector('h1');
+    const select = document.querySelector('select');
+    const list = document.querySelector('ul');
+    const h1 = document.querySelector('h1');
 
-  select.addEventListener('change', () => {
-    const choice = select.value;
-    let days = 0;
+    select.addEventListener('change', () => {
+        const choice = select.value;
+        let days = 0;
 
-    if ( choice === 'January' || choice === 'March' || choice === 'May' || choice === 'July' || choice === 'August' || choice === 'October' || choice === 'December' ) {
-        days = 31;
-    } else if ( choice === 'April' || choice === 'June' || choice === 'September' || choice === 'November') {
-        days = 30;
-    } else if ( choice === 'February') {
-        days = 28;
+        if (choice === 'January' || choice === 'March' || choice === 'May' || choice === 'July' || choice === 'August' || choice === 'October' || choice === 'December') {
+            days = 31;
+        } else if (choice === 'April' || choice === 'June' || choice === 'September' || choice === 'November') {
+            days = 30;
+        } else if (choice === 'February') {
+            days = 28;
+        }
+
+        createCalendar(days, choice);
+    });
+
+    function createCalendar(days, choice) {
+        list.innerHTML = '';
+        h1.textContent = choice;
+        for (let i = 1; i <= days; i++) {
+            const listItem = document.createElement('li');
+            listItem.textContent = i;
+            list.appendChild(listItem);
+        }
     }
 
-    createCalendar(days, choice);
-  });
-
-  function createCalendar(days, choice) {
-    list.innerHTML = '';
-    h1.textContent = choice;
-    for (let i = 1; i <= days; i++) {
-      const listItem = document.createElement('li');
-      listItem.textContent = i;
-      list.appendChild(listItem);
-    }
-  }
-
-  createCalendar(31,'January');
+    createCalendar(31, 'January');
 
 </script>
 </body>
