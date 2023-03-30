@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+<label>Enter a season:</label>
+<input id="season" type="text" placeholder="">
+<button class="description">See description</button>
+<p class="paragraph"></p>
+
+</body>
+
+
+<script>
+    const season = document.getElementById('season');
+    ;
+    const getDescription = document.querySelector('.description');
+    let response;
+    getDescription.addEventListener('click', result);
+    const para1 = document.querySelector('.paragraph');
+
+    function result() {
+        // Add your code here
+        if (season.value === 'summer') {
+            response = "The summer season is one of the main seasons in a tropical country like Canada. " +
+                "Summer sets in June and continues up to the end of August. Summer is usually associated with hot, dry weather. " +
+                "The days are longer, and the nights are shorter during this season.";
+            para1.textContent = response;
+        } else if (season.value === 'fall') {
+            response = "Fall is a beautiful season in Canada. " +
+                "The colors are astonishing. No longer does green dwell the trees. It seems the entire world is on fire. " +
+                "The bright yellow has mingled with the orange to create small flames, flickering from the branches of trees. " +
+                "They fall to the ground and ignite the earth. It has been said before that fire is pure and cleans everything it touches. " +
+                "It takes something broken and dead and gives it one last spurt of beauty."
+            para1.textContent = response;
+        } else if (season.value === 'winter') {
+            response = "Winter is one of the most important seasons in Canada. " +
+                "It is a part of the four seasons that occur in Canada. Winters are the coolest season that starts from December and last till March. The peak time when winter is experienced the most in January and February. " +
+                "In Canada, winters hold great importance."
+            para1.textContent = response;
+        } else if (season.value === 'spring') {
+            response = "Spring is the season during which the natural world revives and reinvigorates after the colder winter months. " +
+                "During spring, dormant plants begin to grow again, new seedlings sprout out of the ground and hibernating animals awake. " +
+                "What most people call spring relies on the astronomical definition of the word."
+            para1.textContent = response;
+        } else {
+            response = "We don't know which season it is."
+            para1.textContent = response;
+        }
+        // Don't edit the code below here!
+    }
+</script>
+
+</html>
