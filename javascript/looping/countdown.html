@@ -5,42 +5,52 @@
     <title>Count Down</title>
 </head>
 <body>
-  <style>
+<style>
     html {
-      font-family: sans-serif;
+        font-family: sans-serif;
     }
 
     h2 {
-      font-size: 16px;
+        font-size: 16px;
     }
 
     .a11y-label {
-      margin: 0;
-      text-align: right;
-      font-size: 0.7rem;
-      width: 98%;
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
     }
 
     body {
-      margin: 10px;
-      background: #f5f9fa;
+        margin: 10px;
+        background: #f5f9fa;
     }
 
-  </style>
-  <div class="output">
+</style>
+<div class="output">
 
-  </div>
+</div>
 
-  <script>
+<script>
     let output = document.querySelector('.output');
     output.innerHTML = '';
 
-    // let i = 10;
+    let i = 10;
 
-    // const para = document.createElement('p');
-    // para.textContent = ;
-    // output.appendChild(para);
+    while (i >= 0) {
+        const para = document.createElement('p');
+        if (i === 10) {
+            para.textContent = `Countdown ${i}`;
+        } else if (i === 0) {
+            para.textContent = 'Blast off!';
+        } else {
+            para.textContent = i;
+        }
 
-  </script>
+        output.appendChild(para);
+
+        i--;
+    }
+</script>
 </body>
 </html>
