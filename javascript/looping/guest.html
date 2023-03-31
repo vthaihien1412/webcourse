@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guest</title>
+    <title>Title</title>
 </head>
 <body>
-<div class="admitted">
+<div class ="admitted"></div>
+<div class ="refused"></div>
+</body>
 
-</div>
-<div class="refused">
-  
-</div>
 <script>
-  const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+    const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
-  const admitted = document.querySelector('.admitted');
-  const refused = document.querySelector('.refused');
-  admitted.textContent = 'Admit: ';
-  refused.textContent = 'Refuse: ';
+    const admitted = document.querySelector('.admitted');
+    const refused = document.querySelector('.refused');
+    admitted.textContent = 'Admit: ';
+    refused.textContent = 'Refuse: ';
 
-  // loop starts here
-
-  // refused.textContent += ;
-  // admitted.textContent += ;
-
+    // loop starts here
+    for (const person of people) {
+        if (person === 'Phil' || person === 'Lola') {
+            refused.textContent += `${person}, `;
+        } else {
+            admitted.textContent += `${person}, `;
+        }
+    }
 
 </script>
-</body>
 </html>
