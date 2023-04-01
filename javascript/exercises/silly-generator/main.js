@@ -1,5 +1,5 @@
 const customName = document.getElementById('customname');
-const randomize = document.querySelector('.randomize');
+const randomizeButton = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 function randomValueFromArray(array) {
@@ -21,9 +21,8 @@ randomizeButton.addEventListener('click', result);
 
 function result() {
 
-    if(customName.value !== '') {
-        const name = customName.value;
-        newStory = newStory.replace('Bob', name);
+    if (customName.value !== '') {
+        newStory = newStory.replace('Bob', customName.value);
     }
 
     if (document.getElementById("uk").checked) {
