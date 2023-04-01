@@ -11,12 +11,14 @@ const storyText = 'It was 94 fahrenheit outside, so insertx went for a walk. Whe
 const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
-let newStory = storyText;
 const xItem = randomValueFromArray(insertX);
 const yItem = randomValueFromArray(insertY);
 const zItem = randomValueFromArray(insertZ);
-newStory = storyText.replaceAll('insertx', xItem).replace('inserty', yItem).replace('insertz', zItem);
-randomize.addEventListener('click', result);
+let newStory = storyText.replaceAll('insertx', xItem)
+    .replace('inserty', yItem)
+    .replace('insertz', zItem);
+randomizeButton.addEventListener('click', result);
+
 function result() {
 
     if(customName.value !== '') {
@@ -24,12 +26,13 @@ function result() {
         newStory = newStory.replace('Bob', name);
     }
 
-    if(document.getElementById("uk").checked) {
+    if (document.getElementById("uk").checked) {
         const weight = Math.round(300 / 14) + " stone";
-        const temperature =  Math.round((94 -32) * 0.5556 ) + " centigrade" ;
-        newStory = newStory.replace('300 pounds', weight).replace('94 fahrenheit', temperature);
+        const temperature = Math.round((94 - 32) * 0.5556) + " centigrade";
+        newStory = newStory.replace('300 pounds', weight)
+            .replace('94 fahrenheit', temperature);
     }
 
-    story.textContent = newStory ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
