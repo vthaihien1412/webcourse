@@ -24,12 +24,10 @@
     const products = ['Underpants:6.99', 'Socks:5.99',
         'T-shirt:14.99', 'Trousers:31.99', 'Shoes:23.99'];
 
-    for (product of products) {
-        const productSplit = product.split(':');
-        const productName = productSplit[0];
-        const productPrice = Number(productSplit[1]);
-        total += productPrice;
-        let itemText = `${productName} - $${productPrice}`;
+    for (const product of products) {
+        const pairs = product.split(':');// ["Underpants", "6.99"]
+        total += Number(pairs[1]);
+        let itemText = `${pairs[0]} - $${Number(pairs[1])}`;
         const listItem = document.createElement('li');
         listItem.textContent = itemText;
         list.appendChild(listItem);
