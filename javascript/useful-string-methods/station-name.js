@@ -8,9 +8,7 @@ const output = [];
 for (const station of stations) {
     const shortName = station.slice(0, 3);
     const indexName = station.indexOf(';');
-    const Name = station.slice(indexName + 1);
-    const finalName = `${shortName}: ${Name}`;
-    const formattedString = finalName;
-    output.push(formattedString);
+    const name = station.slice(indexName + 1);
+    output.push(`${shortName}: ${name}`);
 }
 console.log(output);
